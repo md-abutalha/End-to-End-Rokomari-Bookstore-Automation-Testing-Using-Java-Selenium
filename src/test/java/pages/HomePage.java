@@ -11,8 +11,7 @@ public class HomePage extends BasePage {
     public By somokalinOporNash = By.xpath("//label[contains(text(),'সমকালীন উপন্যাস')]");
     public By upornashSomogroho = By.xpath("//label[contains(text(),'উপন্যাস সমগ্র')]");
     public By nextPage = By.xpath("//a[normalize-space()='2']");
-    By addToCartBook = By.xpath("//div[@title='অনীশ হুমায়ূন আহমেদ']//div[1]//div[3]//button[1]");
-    By clickCartPage = By.xpath("//img[@alt='cart']");
-
+    public By addToCartBook = By.xpath("//div[@title='চৈত্রের দ্বিতীয় দিবস হুমায়ূন আহমেদ']//div[1]//div[3]//button[1]");
+    public By clickCartPage = By.xpath("//img[@alt='cart']");
 
 }

@@ -73,8 +73,9 @@ public class TestHomePage extends DriverSetup {
 //    }
 
     @Test(priority = 2)
-    public void testHomePageWritterSelect() {
+    public void testHomePage() {
         getDriver().get(homePage.url);
+        popUpHandle();
         Actions action = new Actions(getDriver());
 
         // Scroll to the position of writer list
@@ -103,15 +104,17 @@ public class TestHomePage extends DriverSetup {
         upornashSomogrohoElement.click();
 
         action.scrollByAmount(0, 5500).build().perform();
-
         WebElement nextPageElement = new WebDriverWait(getDriver(), Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(homePage.nextPage));
         nextPageElement.click();
 
-
-
-        
-
+        //add to cart
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        action.scrollByAmount(0,5100).build().perform();
+        homePage.clickElement(homePage.addToCartBook);
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        homePage.clickElement(homePage.clickCartPage);
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
 
