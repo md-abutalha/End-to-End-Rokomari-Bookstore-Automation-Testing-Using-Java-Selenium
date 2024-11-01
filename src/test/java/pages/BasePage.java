@@ -62,6 +62,12 @@ public class BasePage extends DriverSetup {
         return element != null && element.isDisplayed();
     }
 
+    //clear Field
+    public void clearField(By locator) {
+        WebElement element = getDriver().findElement(locator);
+        element.clear();
+    }
+
     // Screenshots Method
     public void addScreenshots() {
         Allure.addAttachment("Screenshot", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));

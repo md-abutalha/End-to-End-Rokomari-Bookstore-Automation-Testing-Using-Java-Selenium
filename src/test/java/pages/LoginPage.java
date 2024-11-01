@@ -40,7 +40,7 @@ public class LoginPage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(nextButton)).click();
 
         // Enter password
-        wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys("topdown@");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys("passtalha");
         wait.until(ExpectedConditions.elementToBeClickable(nextButton)).click();
     }
 }

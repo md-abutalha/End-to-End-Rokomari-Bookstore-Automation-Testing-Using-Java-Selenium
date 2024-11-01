@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <!-- Run TestHomePage - homePageUrlAndPopupBannerTest -->
+    <test verbose="2" name="TestHomePage - homePageUrlAndPopupBannerTest">
+        <classes>
+            <class name="testcases.TestHomePage">
+                <methods>
+                    <include name="testHomePageFeatures"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Run TestCartPage - shippingPageInfoTest -->
+    <test verbose="2" name="TestCartPage - shippingPageInfoTest">
+        <classes>
+            <class name="testcases.TestCartPage">
+                <methods>
+                    <include name="shippingPageInfoTest"/>
+                    <include name="testLogOut"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

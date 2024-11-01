@@ -36,19 +36,14 @@ public class TestHomePage extends DriverSetup {
         }
     }
 
-//    @Test
-//    public void loginUrl() throws InterruptedException {
-//        getDriver().get(homePage.loginUrl);
-//        Thread.sleep(2000);
-//    }
 
     // url & popUp banner handle
-    @Test(priority = 1)
-    public void homePageUrlAndPopupBannerTest() throws InterruptedException {
-        getDriver().get(homePage.url);
-        Thread.sleep(4000);
-        popUpHandle();
-    }
+//    @Test(priority = 2)
+//    public void homePageUrlAndPopupBannerTest() throws InterruptedException {
+//        getDriver().get(homePage.url);
+//        Thread.sleep(4000);
+//        popUpHandle();
+//    }
 
     // Select লখক from the menu
     // Select মায়ুন আহেমদ
@@ -72,10 +67,11 @@ public class TestHomePage extends DriverSetup {
 //        homePage.clickElement(homePage.nextPage);
 //    }
 
-    @Test(priority = 2)
-    public void testHomePage() {
+    @Test(priority = 1, description = "test main feature of the home page")
+    public void testHomePageFeatures() {
         getDriver().get(homePage.url);
         popUpHandle();
+        homePage.addScreenshots();
         Actions action = new Actions(getDriver());
 
         // Scroll to the position of writer list
@@ -108,13 +104,40 @@ public class TestHomePage extends DriverSetup {
                 .until(ExpectedConditions.elementToBeClickable(homePage.nextPage));
         nextPageElement.click();
 
+        homePage.addScreenshots();
+
         //add to cart
+//        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        action.scrollByAmount(0,5100).build().perform();
+//        action.moveToElement(homePage.getElement(homePage.hoverAddToCartImage)).build().perform(); //hover
+//        homePage.clickElement(homePage.addToCartBook);
+//        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        homePage.clickElement(homePage.clickCartPage);
+//        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        // Set implicit wait once, globally.
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        action.scrollByAmount(0,5100).build().perform();
+
+// Scroll to bring the element into view.
+        action.scrollByAmount(0, 5100).perform();
+
+// Hover over the "Add to Cart" image
+        action.moveToElement(homePage.getElement(homePage.hoverAddToCartImage)).perform();
+
+// Explicit wait for "Add to Cart" button to be clickable
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(homePage.getElement(homePage.addToCartBook)));
+
+// Click "Add to Cart" button
         homePage.clickElement(homePage.addToCartBook);
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+// Explicit wait for Cart page button to be clickable
+        wait.until(ExpectedConditions.elementToBeClickable(homePage.getElement(homePage.clickCartPage)));
+
+// Click on the cart page link/button
         homePage.clickElement(homePage.clickCartPage);
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+
     }
 
 
