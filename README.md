@@ -80,7 +80,7 @@ allure open .\allure-report\
 [![Watch the video](https://img.youtube.com/vi/2-FjDvooIL0/0.jpg)](https://youtu.be/Op4NIyb5KAE?si=8KAITpadhWXCdaWd)
 
 
-##__Screenshots__
+## _Screenshots_
 ![image](https://github.com/user-attachments/assets/8051acdf-2627-4a5f-ab19-97f28adabf43)
 ![image](https://github.com/user-attachments/assets/441b2558-18eb-40a2-aa0f-9f82be6abe47)
 ![image](https://github.com/user-attachments/assets/55cd1ef6-b6d0-4fa9-8603-7dea53bd9343)
