@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 public class HomePage extends BasePage {
     public String loginUrl = "https://www.rokomari.com/book";
     public String url = "https://www.rokomari.com/book";
+    public String url_1 = "https://www.rokomari.com/book/author/1/humayun-ahmed?xyz=&categoryIds=680&categoryIds=677&priceRange=0to45100&discountRange=0to40";
+    public String url_page2 = "https://www.rokomari.com/book/author/1/humayun-ahmed?xyz=&categoryIds=680&categoryIds=677&priceRange=0to45100&discountRange=0to40&page=2";
+
     public By popUpBanner = By.xpath("//div[@id='js--entry-popup']//i[@class='ion-close-round']");
     public By writterList = By.xpath("//a[@id='js--authors']");
     public By WritterName = By.xpath("//a[contains(text(),'হুমায়ূন আহমেদ')]");

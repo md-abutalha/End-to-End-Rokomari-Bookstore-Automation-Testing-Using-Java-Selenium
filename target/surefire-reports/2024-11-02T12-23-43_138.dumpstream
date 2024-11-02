@@ -1,0 +1,5 @@
+# Created at 2024-11-02T12:23:45.160
+Boot Manifest-JAR contains absolute paths in classpath 'D:\SQA\java-with-selenium-automation-official\HomeWorkByTalha\Rokomari-Bookstore-Automation-E2E\Rokomari-Bookstore-Automation-Testing\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

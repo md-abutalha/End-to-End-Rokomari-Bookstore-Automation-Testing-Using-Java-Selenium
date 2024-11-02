@@ -25,12 +25,13 @@ public class TestCartPage extends DriverSetup {
 
 
     // Shipping page info test
-    @Test(priority = 2, description = "Test cart edit all info and test")
+    @Test(priority = 6, description = "Test cart edit all info and test")
     public void shippingPageInfoTest() {
         getDriver().get(cartPage.cartUrl);
         homePage.addScreenshots();  // fo the screenshots
         // Navigate to shipping page
         homePage.clickElement(cartPage.shippingPageEdit);
+        homePage.addScreenshots();
         homePage.clickElement(cartPage.homeRadioInfo);
 
         // Fill in the shipping information
@@ -54,25 +55,22 @@ public class TestCartPage extends DriverSetup {
         // Fill in address details
         homePage.clearField(cartPage.detailsAddress);
         homePage.writeOnElement(cartPage.detailsAddress, "House # 12, Road # 5, Sector # 4, Uttara, Dhaka-1230, Bangladesh");
-
+        homePage.addScreenshots();
         homePage.addScreenshots(); // add screenshots
         // Save the address
         homePage.clickElement(cartPage.saveButton);
 
     }
 
-    @Test(priority = 3, description = "Logs out of the account after testing cart page features", dependsOnMethods = {"shippingPageInfoTest"})
+    @Test(priority = 7, description = "Logs out of the account after testing cart page features", dependsOnMethods = {"shippingPageInfoTest"})
     public void testLogOut() {
         getDriver().get(cartPage.cartUrl);
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        homePage.addScreenshots();
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        homePage.clickElement(cartPage.clickAccount);
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        homePage.clickElement(cartPage.signOutButton);
 
-        // Wait and click on the account element
-        WebElement accountElement = wait.until(ExpectedConditions.elementToBeClickable(cartPage.clickAccount));
-        homePage.clickElement((By) accountElement);
-
-        // Wait and click on the sign-out element
-        WebElement signOutElement = wait.until(ExpectedConditions.elementToBeClickable(cartPage.signOut));
-        homePage.clickElement((By) signOutElement);
     }
 //Md. Abu Talha
 //abutalhabd88@gmail.com

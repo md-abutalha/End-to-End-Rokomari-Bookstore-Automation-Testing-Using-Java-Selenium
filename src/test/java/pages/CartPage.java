@@ -25,5 +25,5 @@ public class CartPage extends BasePage {
 
     //logout locator
     public By clickAccount = By.xpath("//i[@class='ion-arrow-down-b']");
-    public By signOut = By.xpath("//a[normalize-space()='Sign Out']");
+    public By signOutButton = By.xpath("//a[normalize-space()='Sign Out']");
 }

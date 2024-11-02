@@ -7,7 +7,12 @@
         <classes>
             <class name="testcases.TestHomePage">
                 <methods>
-                    <include name="testHomePageFeatures"/>
+                    <exclude name="testHomePageFeatures"/>
+                    <include name="testNavigateToHomePageAndHandlePopup"/>
+                    <include name="testScrollToWriterListAndHover"/>
+                    <include name="testNavigateToNextPage"/>
+                    <include name="testAddItemToCart"/>
+                    <include name="testNavigateToCartPage"/>
                 </methods>
             </class>
         </classes>
