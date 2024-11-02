@@ -77,7 +77,7 @@ allure open .\allure-report\
 - `allure-report/`: Allure-generated HTML reports.
 
 ## E2E Automation Project Vedio
-[![Watch the video](https://img.youtube.com/vi/2-FjDvooIL0/0.jpg)](https://youtu.be/2-FjDvooIL0)
+[![Watch the video](https://img.youtube.com/vi/2-FjDvooIL0/0.jpg)]([https://youtu.be/2-FjDvooIL0](https://youtu.be/Op4NIyb5KAE?si=ZRULA0nV3CxvAtaN))
 
 ##__Screenshots__
 ![image](https://github.com/user-attachments/assets/8051acdf-2627-4a5f-ab19-97f28adabf43)
